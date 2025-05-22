@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Recherche de films</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 style="text-align: center;">Recherche de films</h1>
+  <form style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;" id="search-form">
+    <input type="text" id="search-input" placeholder="Entrez un nom de film..." required>
+    <button type="submit">Rechercher</button>
+  </form>
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p><strong>Date de sortie :</strong> <span id="modal-release"></span></p>
+      <p><strong>Résumé :</strong></p>
+      <p id="modal-plot"></p>
+    </div>
+  </div>
+  <div id="movies-list"></div>
+  <div id="sentinel"></div> <!-- Pour l’Intersection Observer -->
+
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
